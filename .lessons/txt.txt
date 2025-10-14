@@ -1,0 +1,20 @@
+cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/one.conf
+cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/two.conf
+
+mousepad /etc/apache2/sites-available/one
+mousepad /etc/apache2/sites-available/two
+
+mkdir /var/www/one | echo "This is one website" | tee /var/www/one/index.html
+mkdir /var/www/two | echo "This is two website" | tee /var/www/two/index.html
+
+mousepad /etc/apache2/ports.conf
+
+a2ensite one.conf
+a2ensite two.conf
+
+systemctl reload apache2
+netstat -tnlp
+
+ls -l /etc/apache2/sites-enabled
+
+mousepad /etc/hosts

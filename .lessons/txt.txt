@@ -1,0 +1,1 @@
+Named Volume — Docker-in özünün yaratdığı və idarə etdiyi xüsusi bir fayl saxlama sahəsidir. Bu sahə konteynerdən kənarda yerləşir və konteyner silinsə belə, içindəki məlumat qalır.
